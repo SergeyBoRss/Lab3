@@ -17,7 +17,7 @@ int main() {
     cin >> st;
 
     TArithmeticExpression now(st);
-    cout << "Infix form: " << now.GetInfix() << endl;
+    cout << "Infix form: \n" << now.GetInfix() << endl;
     cout << "Postfix form: " << now.ToPostfix() << endl;
     cout << "Calculate: " << now.Calculate() << endl;
 }
