@@ -11,18 +11,13 @@ using namespace std;
 
 
 int main() {
-    string infix;
-    string postfix;
 
-    map<string, int> priority;
-    vector<double> nums;
-    vector<string> lexems;
-    string st = "2++3";
+    string st;
+    cout << "Enter expression:";
+    cin >> st;
 
-
-    TArithmeticExpression test(st);
-    cout << test.ToPostfix() << endl;
-    for (auto i:test.GetLexs())
-        cout << i << " ";
-    cout << test.Calculate();
+    TArithmeticExpression now(st);
+    cout << "Infix form: " << now.GetInfix() << endl;
+    cout << "Postfix form: " << now.ToPostfix() << endl;
+    cout << "Calculate: " << now.Calculate() << endl;
 }
